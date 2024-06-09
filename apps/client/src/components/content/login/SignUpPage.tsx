@@ -18,7 +18,8 @@ import {
 } from "../../ui/form";
 // import { toast } from "@/components/ui/use-toast";
 import BoxWrapper from "../../layout/BoxWrapper";
-import { Input, InputPassword } from "../../ui/input";
+import { Input } from "../../ui/input";
+import { InputPassword } from "../../ui/input-password";
 import Link from "next/link";
 
 const FormSchema = z.object({
