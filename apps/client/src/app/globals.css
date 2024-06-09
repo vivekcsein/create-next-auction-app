@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: 213 1% 95%;
+  --foreground: 213 1% 0%;
+  --card: 213 1% 90%;
+  --card-foreground: 213 1% 10%;
+  --popover: 213 1% 95%;
+  --popover-foreground: 213 95% 0%;
+  --primary: 213 81.3% 21%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 10% 70%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 175 10% 85%;
+  --muted-foreground: 213 1% 35%;
+  --accent: 175 10% 80%;
+  --accent-foreground: 213 1% 10%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 213 1% 90%;
+  --border: 213 20% 50%;
+  --input: 213 20% 18%;
+  --ring: 213 81.3% 21%;
+  --radius: 0.5rem;
+  --special: 344 75.5% 40%;
+}
+
+.dark {
+  --background: 213 10% 5%;
+  --foreground: 213 1% 90%;
+  --card: 213 1% 0%;
+  --card-foreground: 213 1% 90%;
+  --popover: 213 10% 5%;
+  --popover-foreground: 213 1% 90%;
+  --primary: 213 81.3% 21%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 10% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 175 10% 15%;
+  --muted-foreground: 213 1% 60%;
+  --accent: 175 10% 15%;
+  --accent-foreground: 213 1% 90%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 213 1% 90%;
+  --border: 213 20% 18%;
+  --input: 213 20% 18%;
+  --ring: 213 81.3% 21%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+h5 {
+  font-size: 1.44rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: calc(3.25rem * 0.75);
+  }
+
+  h2 {
+    font-size: calc(2.5rem * 0.75);
+  }
+
+  h3 {
+    font-size: calc(2.074rem * 0.75);
+  }
+
+  h4 {
+    font-size: calc(1.728rem * 0.75);
+  }
+
+  h5 {
+    font-size: calc(1.44rem * 0.75);
+  }
+
+  h6 {
+    font-size: calc(1.2rem * 0.75);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  font-weight: 700;
+  text-wrap: pretty;
+}
+
+p,
+div,
+span {
+  font-size: 1rem;
+}
+
+p.small {
+  font-size: 0.833rem;
+}
+
+div,
+span,
+p {
+  line-height: 1.6;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--special);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--special);
+}
+
+.scrollX {
+  @apply overflow-x-scroll max-w-[450px];
+}
+
+.scrollY {
+  @apply overflow-y-scroll max-h-[450px];
+}
